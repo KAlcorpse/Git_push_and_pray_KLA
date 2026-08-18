@@ -194,7 +194,7 @@ results/
   val_example.png         held-out image: input, bicubic, restored, ground truth
   test_example.png        test input: input, bicubic, restored
   failure_case.png        a below-average case, discussed in metrics.md
-solution_presentation.pdf mandatory Phase 1 presentation
+Solution_ppt.pdf
 ```
 
 ---
