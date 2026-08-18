@@ -18,7 +18,7 @@ pip install -r requirements.txt
 python run.py <input-dir> <output-dir>
 ```
 
-That is the whole contract. No source edits, no notebook cells, no local paths,
+That is the whole contract. No source edits, No notebook cells, no local paths,
 no configuration, no interaction. The output directory is created if it does not
 exist. The default checkpoint at `models/best.pth` is resolved relative to
 `run.py`, so the command works from any working directory.
@@ -110,7 +110,7 @@ Ablation of the loss design on the same split:
 The distortion-only model has the best PSNR and SSIM and 77% worse LPIPS with
 visibly more smearing. The submitted model gives up 0.02 dB to halve perceptual
 distance, and beats the equivalent single-head run on all four metrics at
-identical FLOPs.
+identical FLOPs. Thus it can be concluded that the distortion model, sacrifices on LPIPS to boost other IQA metrics.
 
 Full metric tables, restored examples and the failure case are in `results/`.
 
