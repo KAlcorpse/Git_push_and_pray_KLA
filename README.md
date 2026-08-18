@@ -230,3 +230,12 @@ solution_presentation.pdf mandatory Phase 1 presentation
 
 No external datasets and no pretrained restoration weights were used. The model
 is trained from scratch on the provided pairs only.
+
+Additional implementation details
+
+1.The complete restoration model is implemented using standard PyTorch modules; no external pretrained restoration architecture or weights are imported.
+2.All trainable model parameters are initialized and optimized from scratch using only the provided training pairs.
+3.External libraries are used only for numerical operations, evaluation metrics, degradation fitting, and supporting the training pipeline.
+4.The inference pipeline is self-contained and does not require lpips or any pretrained model weights.
+5.No external datasets, synthetic datasets from third-party sources, or additional restoration checkpoints were used.
+6.Evaluation metrics are computed independently on the provided test/validation pairs to ensure a consistent comparison across methods.
