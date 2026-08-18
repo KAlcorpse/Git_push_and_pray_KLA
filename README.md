@@ -11,7 +11,7 @@ images excluded from both training and model selection.
 
 ---
 
-## 1. Run it
+## 1. Run the code
 
 ```bash
 pip install -r requirements.txt
