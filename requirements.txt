@@ -1,0 +1,27 @@
+# ---------------------------------------------------------------------------
+# Inference (run.py) needs ONLY these two. No network access is used at run
+# time: no downloads, no API keys, no pretrained weights fetched on import.
+# ---------------------------------------------------------------------------
+torch==2.4.1
+numpy==2.1.1
+
+# ---------------------------------------------------------------------------
+# Training and evaluation only. run.py never imports any of these, so a
+# minimal install of the two lines above is enough to reproduce our outputs.
+# ---------------------------------------------------------------------------
+scikit-image==0.24.0        # SSIM
+scipy==1.14.1               # degradation fitting
+lpips==0.1.4                # perceptual metric and loss (downloads AlexNet once)
+torchvision==0.19.1         # required by lpips
+tqdm==4.66.5
+matplotlib==3.9.2
+
+# ---------------------------------------------------------------------------
+# Replace the pinned versions above with the ones actually installed, so the
+# file describes the environment the checkpoint was produced in:
+#
+#   pip freeze | grep -iE "^(torch|numpy|scikit-image|scipy|lpips|torchvision|tqdm|matplotlib)=="
+#
+# CUDA build: install torch from the index matching the target driver, e.g.
+#   pip install torch==2.4.1 --index-url https://download.pytorch.org/whl/cu121
+# ---------------------------------------------------------------------------
